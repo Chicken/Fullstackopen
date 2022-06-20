@@ -1,3 +1,3 @@
-# Fullstackopen 2021
+# Fullstackopen 21/22
 
 Exercises for [Fullstackopen](https://fullstackopen.com/en)
