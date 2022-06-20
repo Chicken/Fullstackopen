@@ -1,0 +1,32 @@
+{
+    "name": "phonebook",
+    "version": "1.0.0",
+    "private": true,
+    "main": "src/index.js",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.1",
+        "express": "^5.0.0-beta.1",
+        "mongoose": "^6.4.0",
+        "morgan": "^1.10.0"
+    },
+    "scripts": {
+        "start": "node .",
+        "dev": "nodemon .",
+        "build:ui": "rm -rf build && cd ../frontend && yarn build && cp -r build ../backend/build",
+        "deploy": "git push heroku master",
+        "deploy:full": "yarn build:ui && git add . && git commit -m 'build' && npm run deploy",
+        "logs:prod": "heroku logs --tail",
+        "mongo": "node mongo.js",
+        "lint": "eslint --ext js --fix .",
+        "format": "prettier -w ."
+    },
+    "devDependencies": {
+        "eslint": "^8.18.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "nodemon": "^2.0.16",
+        "prettier": "^2.7.1"
+    }
+}
